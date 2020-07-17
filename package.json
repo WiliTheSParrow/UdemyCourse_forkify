@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/WiliTheSParrow/UdemyCourse_forkify/issues"
   },
-  "homepage": "https://github.com/WiliTheSParrow/UdemyCourse_forkify#readme"
+  "homepage": "https://github.com/WiliTheSParrow/UdemyCourse_forkify#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  }
 }
