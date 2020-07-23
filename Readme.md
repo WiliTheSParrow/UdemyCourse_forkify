@@ -23,6 +23,9 @@ This project was built by <a href="https://www.linkedin.com/in/wjulia91/">Julia 
 * JavaScript
 * HTML
 * CSS
+* Node JS
+* webpack
+* Babel
 
 ## Click on the link below to check out this project
 <a href="#">coming soon.</a>
