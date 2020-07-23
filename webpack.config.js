@@ -22,6 +22,8 @@ module.exports = {
         rules: [{
             // It'll look for all the files, which has the ending '.js'.
             test: /\.js$/,
+            exclude: /node_modules/,
+            // If it finds the '.js' file, it will load the Babel loader.
             use: {
                 loader: 'babel-loader'
             }
