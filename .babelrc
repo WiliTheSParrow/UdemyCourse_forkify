@@ -1,14 +1,14 @@
 {
-    "preset": [
+    "presets": [
         // environment, basic preset environment:
-        "env", {
-            "target": {
+        ["env", {
+            "targets": {
                 "browsers": [
                     // it will figure out which ES6 features it neds to convert in order to work in the last 5 versions of the browser:
                     "last 5 versions",
                     "ie >=8"
                 ]
             }
-        }
+        }]
     ]
 }
