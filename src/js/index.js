@@ -1,5 +1,9 @@
 // MVC - CONTROLLER FILE
 import Search from './models/Search';
+import * as searchView from './views/searchView';
+import {
+    elements
+} from './views/base';
 
 /* Global state of the app
 - Search object
@@ -10,7 +14,8 @@ const state = {};
 
 const controlSearch = async () => {
     // 1) Get query from view
-    const query = 'pizza'; //TODO
+    const query = searchView.getInput();
+    console.log(query);
 
     // If there is a view we want a new search object:
     if (query) {
