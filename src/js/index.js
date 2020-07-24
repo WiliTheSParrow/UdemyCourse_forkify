@@ -24,13 +24,15 @@ const controlSearch = async () => {
         state.search = new Search(query);
 
         // 3) Pre UI for results
+        searchView.clearInput();
+        searchView.clearResults();
 
         // 4) Search for recipes
         // we have to wait to the call to get back with the data:
         await state.search.getResults();
 
         // 5) Render results on UI
-        
+
         searchView.renderResults(state.search.result);
     }
 };
