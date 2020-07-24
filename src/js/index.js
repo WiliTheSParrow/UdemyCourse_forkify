@@ -8,14 +8,29 @@ import Search from './models/Search';
 - Liked recipes */
 const state = {};
 
-const controlSearch = () =>{};
+const controlSearch = async () => {
+    // 1) Get query from view
+    const query = 'pizza'; //TODO
+
+    // If there is a view we want a new search object:
+    if (query) {
+        // 2) New search object and add to statement
+        // We will store this in the global state object:
+        state.search = new Search(query);
+
+        // 3) Pre UI for results
+
+        // 4) Search for recipes
+        // we have to wait to the call to get back with the data:
+        await state.search.getResults();
+
+        // 5) Render results on UI
+        console.log(state.search.result);
+    }
+};
 
 document.querySelector('.search').addEventListener('submit', e => {
     // The page automatically reloads, to prevent that: preventDefault();
     e.preventDefault();
     controlSearch();
 });
-
-const search = new Search('pizza');
-console.log(search);
-search.getResults();
