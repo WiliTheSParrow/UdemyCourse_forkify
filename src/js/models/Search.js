@@ -1,3 +1,4 @@
+//Search.js: Here we have the search query and search results.
 import axios from 'axios';
 
 export default class Search {
@@ -9,7 +10,7 @@ export default class Search {
         try {
             const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${this.query}`);
             this.results = res.data.recipes;
-            //console.log(this.results);
+            // console.log(this.results);
         } catch (error) {
             alert(error);
         }
