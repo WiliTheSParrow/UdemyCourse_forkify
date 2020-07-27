@@ -18,8 +18,9 @@ const state = {};
 // SEARCH CONTROLLER
 const controlSearch = async () => {
     // 1) Get query from view
-    const query = searchView.getInput();
+    // const query = searchView.getInput();
     // console.log(query);
+    const query = 'pizza';
 
     // If there is a view we want a new search object:
     if (query) {
@@ -51,6 +52,13 @@ elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
 });
+// TESTING //////////////
+window.addEventListener('load', e => {
+    // The page automatically reloads, to prevent that: preventDefault();
+    e.preventDefault();
+    controlSearch();
+});
+/////////////////////////
 
 elements.searchResPages.addEventListener('click', e => {
     const btn = e.target.closest('.btn-inline');
@@ -78,6 +86,9 @@ const controlRecipe = async () => {
 
         // Create new recipe object
         state.recipe = new Recipe(id);
+        // TESTING////
+        window.r = state.recipe;
+        //////
 
         try {
             // Get recipe data
