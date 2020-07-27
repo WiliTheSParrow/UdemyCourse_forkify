@@ -32,13 +32,17 @@ const controlSearch = async () => {
         searchView.clearResults();
         renderLoader(elements.searchRes);
 
-        // 4) Search for recipes
-        // we have to wait to the call to get back with the data:
-        await state.search.getResults();
+        try {
+            // 4) Search for recipes
+            // we have to wait to the call to get back with the data:
+            await state.search.getResults();
 
-        // 5) Render results on UI
-        clearLoader();
-        searchView.renderResults(state.search.result);
+            // 5) Render results on UI
+            clearLoader();
+            searchView.renderResults(state.search.result);
+        } catch (err) {
+            alert('Something went wrong with the search.')
+        }
     }
 };
 
@@ -64,7 +68,7 @@ const r = new Recipe(47746);
 r.getRecipe();
 console.log(r); */
 
-const conrolRecipe = async () => {
+const controlRecipe = async () => {
     // Get ID drom url
     const id = window.location.hash.replace('#', '');
     console.log(id);
@@ -75,15 +79,22 @@ const conrolRecipe = async () => {
         // Create new recipe object
         state.recipe = new Recipe(id);
 
-        // Get recipe data
-        // asybc will return a promise:
-        await state.recipe.getRecipe();
+        try {
+            // Get recipe data
+            // asybc will return a promise:
+            await state.recipe.getRecipe();
 
-        // Calculate servings and time
-        state.recipe.calcTime();
-        state.recipe.calcServings();
-        // Render recipe
-        console.log(state.recipe);
+            // Calculate servings and time
+            state.recipe.calcTime();
+            state.recipe.calcServings();
+            // Render recipe
+            console.log(state.recipe);
+        } catch (err) {
+            alert('Error processing recipe!')
+        }
     }
 };
-window.addEventListener('hashchange', conrolRecipe);
+
+/* window.addEventListener('hashchange', conrolRecipe);
+window.addEventListener('load', conrolRecipe); */
+['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
