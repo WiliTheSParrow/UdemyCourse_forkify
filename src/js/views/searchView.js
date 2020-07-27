@@ -10,6 +10,7 @@ export const clearInput = () => {
 
 export const clearResults = () => {
     elements.searchResList.innerHTML = '';
+    elements.searchResPages.innerHTML = '';
 };
 
 // 'Pasta with tomato and spinach'
