@@ -1,5 +1,6 @@
 //Search.js: Here we have the search query and search results.
 import axios from 'axios';
+// axios: Promise based HTTP client for the browser and node.js
 
 export default class Search {
     constructor(query) {
