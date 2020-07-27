@@ -58,7 +58,14 @@ elements.searchResPages.addEventListener('click', e => {
 });
 
 // RECIPE CONTROLLER
+
 /* Testing: 
 const r = new Recipe(47746);
 r.getRecipe();
 console.log(r); */
+
+const conrolRecipe = () => {
+    const id = window.location.hash.replace('#', '');
+    console.log(id);
+};
+window.addEventListener('hashchange', conrolRecipe);
