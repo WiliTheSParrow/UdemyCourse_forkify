@@ -3,7 +3,7 @@ export default class Likes {
         this.likes = [];
     }
 
-    addItem(id, title, author, img) {
+    addLike(id, title, author, img) {
         const like = {
             id,
             title,
@@ -14,7 +14,8 @@ export default class Likes {
         return like;
     }
 
-    deleteItem(id) {
+    deleteLike(id) {
+        
         const index = this.likes.findIndex(el => el.id === id);
         return this.likes.splice(index, 1);
     }
@@ -23,7 +24,7 @@ export default class Likes {
         return this.likes.findIndex(el => el.id === id) !== -1;
     }
 
-    getNumLikes(){
+    getNumLikes() {
         return this.likes.length;
     }
 }
