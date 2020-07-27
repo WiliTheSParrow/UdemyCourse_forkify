@@ -40,7 +40,7 @@ const controlSearch = async () => {
     }
 };
 
-document.querySelector('.search').addEventListener('submit', e => {
+elements.searchForm.addEventListener('submit', e => {
     // The page automatically reloads, to prevent that: preventDefault();
     e.preventDefault();
     controlSearch();
