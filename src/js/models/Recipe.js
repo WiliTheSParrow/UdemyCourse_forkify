@@ -7,13 +7,13 @@ export default class Recipe {
         this.id = id;
     }
 
-    async getResults() {
+    async getRecipe() {
         try {
-            const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${this.id}`);
-            this.result = res.data.recipes;
-            // console.log(this.results);
+            const res = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
+            // this.result = res.data.recipes;
+            console.log(res);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     }
 }
