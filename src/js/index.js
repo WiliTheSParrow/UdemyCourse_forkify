@@ -58,6 +58,7 @@ elements.searchResPages.addEventListener('click', e => {
 });
 
 // RECIPE CONTROLLER
+/* Testing: 
 const r = new Recipe(47746);
 r.getRecipe();
-console.log(r);
+console.log(r); */
