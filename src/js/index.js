@@ -159,7 +159,7 @@ elements.shopping.addEventListener('click', e => {
 // LIKE CONTROLLER
 // TESTING
 state.likes = new Likes();
-
+likesView.toggleLikeMenu(state.likes.getNumLikes());
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
