@@ -20,7 +20,6 @@ import {
 - SHopping list object
 - Liked recipes */
 const state = {};
-window.state = state;
 
 // SEARCH CONTROLLER
 const controlSearch = async () => {
@@ -87,7 +86,6 @@ console.log(r); */
 const controlRecipe = async () => {
     // Get ID drom url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
 
     if (id) {
         // Prepare UI for changes
@@ -231,5 +229,3 @@ elements.recipe.addEventListener('click', e => {
     }
 
 });
-
-window.l = new List();
