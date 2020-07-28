@@ -114,7 +114,7 @@ const controlRecipe = async () => {
             state.recipe.calcServings();
             // Render recipe
             clearLoader();
-            recipeView.renderRecipe(state.recipe,state.likes.isLiked(id));
+            recipeView.renderRecipe(state.recipe, state.likes.isLiked(id));
 
         } catch (err) {
             alert('Error processing recipe! 😨');
@@ -190,6 +190,7 @@ const controlLike = () => {
         // Remove like from UI list
         console.log(state.likes);
     }
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
 }
 
 
