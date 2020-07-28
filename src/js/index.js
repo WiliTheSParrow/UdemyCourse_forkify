@@ -178,7 +178,8 @@ const controlLike = () => {
         likesView.toggleLikeBtn(true);
 
         // Add like to UI list
-        console.log(state.likes);
+        likesView.renderLike(newLike);
+
 
         // User HAS liked current recipe    
     } else {
@@ -188,7 +189,7 @@ const controlLike = () => {
         likesView.toggleLikeBtn(false);
 
         // Remove like from UI list
-        console.log(state.likes);
+        likesView.deleteLike(currentID);
     }
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 }
