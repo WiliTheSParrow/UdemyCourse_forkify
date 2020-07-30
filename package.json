@@ -1,7 +1,7 @@
 {
   "name": "forkify",
   "version": "1.0.0",
-  "description": "forkify project",
+  "description": "Forkify web app project for Udemy course.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
