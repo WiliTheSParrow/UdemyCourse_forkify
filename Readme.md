@@ -16,6 +16,7 @@ Forkify for Udemy course: The Complete JavaScript Course 2020: Build Real Projec
 
 This project was built by <a href="https://www.linkedin.com/in/wjulia91/">Julia Wilhelm</a> for Jonas Schmedtmann's online course <a href="https://www.udemy.com/share/101WfeB0cbc1xbTHw=/">The Complete JavaScript Course 2020: Build Real Projects!</a>. Copyright © by Jonas Schmedtmann.
 
+
 API documentation: https://forkify-api.herokuapp.com/
 
 ## Technologies
